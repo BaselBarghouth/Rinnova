@@ -30,7 +30,7 @@ router.post('/',async (req,res,next)=>{
     if(error) return res.status(400).json({message:error.details[0].message})
    const user = await controller.addUser(newUser);
     res.status(200).json({
-        message:'post req is working ',
+        message:true,
         user:user
     })
 })

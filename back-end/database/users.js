@@ -80,6 +80,7 @@ const dataBase =async ()=>{
         }
       };
       const findUser= async props=>{
+
         const {user_email, user_password} = props;
         try{
           const stmt = SQL`SELECT * FROM users WHERE user_email = ${user_email} AND user_password = ${user_password}`;

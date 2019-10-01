@@ -1,7 +1,6 @@
-import React from 'react';
-import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink } from 'mdbreact';
-import { BrowserRouter as Router } from 'react-router-dom';
-import rinnova from '../images/rinnova.png'
+import React from "react";
+import { MDBNavbar,MDBNavbarBrand,MDBNavbarNav,MDBNavbarToggler,MDBCollapse,MDBNavItem,MDBNavLink} from "mdbreact";
+import rinnova from "../images/rinnova.png";
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -20,34 +19,38 @@ class Header extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{marginBottom:"100px"}}>
         <header>
-          <Router>
-            <MDBNavbar color="grey" dark expand="md" fixed="top">
-              <MDBNavbarBrand href="/">
-                <strong><img src={rinnova} style={{maxWidth:'100px'}} alt='Rinnova logo' />
-                
-                </strong>
-              </MDBNavbarBrand>
-              {!this.state.isWideEnough && <MDBNavbarToggler onClick={this.onClick} />}
-              <MDBCollapse isOpen={this.state.collapse} navbar>
-                <MDBNavbarNav left>
-                  <MDBNavItem active>
-                    <MDBNavLink to="#">Home</MDBNavLink>
-                  </MDBNavItem>
-                  <MDBNavItem>
-                    <MDBNavLink to="#">Services</MDBNavLink>
-                  </MDBNavItem>
-                  <MDBNavItem>
-                    <MDBNavLink to="#">Products</MDBNavLink>
-                  </MDBNavItem>
-                  <MDBNavItem>
-                    <MDBNavLink to="#">Contact Us</MDBNavLink>
-                  </MDBNavItem>
-                </MDBNavbarNav>
-              </MDBCollapse>
-            </MDBNavbar>
-          </Router>
+          <MDBNavbar color="grey" dark expand="md" fixed="top">
+            <MDBNavbarBrand href="/">
+              <strong>
+                <img
+                  src={rinnova}
+                  style={{ maxWidth: "100px" }}
+                  alt="Rinnova logo"
+                />
+              </strong>
+            </MDBNavbarBrand>
+            {!this.state.isWideEnough && (
+              <MDBNavbarToggler onClick={this.onClick} />
+            )}
+            <MDBCollapse isOpen={this.state.collapse} navbar>
+              <MDBNavbarNav left>
+                <MDBNavItem active>
+                  <MDBNavLink to="/">Home</MDBNavLink>
+                </MDBNavItem>
+                <MDBNavItem>
+                  <MDBNavLink to="/services">Services</MDBNavLink>
+                </MDBNavItem>
+                <MDBNavItem>
+                  <MDBNavLink to="/products">Products</MDBNavLink>
+                </MDBNavItem>
+                <MDBNavItem>
+                  <MDBNavLink to="/contactus">Contact Us</MDBNavLink>
+                </MDBNavItem>
+              </MDBNavbarNav>
+            </MDBCollapse>
+          </MDBNavbar>
         </header>
       </div>
     );
