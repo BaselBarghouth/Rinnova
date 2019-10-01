@@ -1,7 +1,6 @@
 import fetching from "./Fetch";
- class API {
+class API {
   constructor(props) {
-   
     this.key = props;
   }
   getApi = async () => {

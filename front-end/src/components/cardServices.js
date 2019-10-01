@@ -19,7 +19,7 @@ const cardSrevices = props =>
             <MDBCardTitle>{item.service_name}</MDBCardTitle>
             <MDBCardText>{item.service_desc}</MDBCardText>
             <MDBBtn color="primary" href="/contactus">
-              MDBBtn
+              Contact Us
             </MDBBtn>
           </MDBCardBody>
         </MDBCard>

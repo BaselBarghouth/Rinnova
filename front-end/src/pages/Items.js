@@ -20,7 +20,11 @@ class Items extends React.Component {
       <div>
         <Header />
         <div
-          style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "wrap"
+          }}
         >
           <Card items={this.state.items} {...this.props} />
         </div>
